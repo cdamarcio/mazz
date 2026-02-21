@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suporte Acadêmico - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>body { padding-top: 70px; }</style>
+    <style>
+        body { padding-top: 70px; }
+        .hero-academico { 
+            background: linear-gradient(rgba(0, 43, 91, 0.9), rgba(0, 43, 91, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center; color: white; padding: 60px 0;
+        }
+        .feature-icon { font-size: 2.5rem; color: #0d6efd; margin-bottom: 1rem; }
+        .step-card { border: none; border-radius: 15px; transition: 0.3s; height: 100%; }
+        .step-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important; }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100 bg-light">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="index.html">MAZZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
@@ -24,11 +37,66 @@
         </div>
     </nav>
 
+    <header class="hero-academico text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Suporte Acadêmico Especializado</h1>
+            <p class="lead">Transformando sua jornada universitária em sucesso profissional.</p>
+        </div>
+    </header>
+
     <main class="container my-5 flex-grow-1">
-        <h1 class="fw-bold text-primary">Suporte Acadêmico</h1>
-        <div class="row g-4 mt-3">
-            <div class="col-md-6"><h3>Estágios</h3><p>Consultoria para entrada no mercado de trabalho.</p></div>
-            <div class="col-md-6"><h3>Orientação de TCC</h3><p>Mentoria especializada para Engenharias e TI.</p></div>
+        
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="fw-bold text-primary mb-3">Orientação de TCC</h2>
+                <p class="text-muted">Sabemos que o Trabalho de Conclusão de Curso é o maior desafio da graduação. Oferecemos suporte técnico nas áreas de:</p>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-check-circle-fill text-primary"></i> ✅ <strong>Engenharia Civil:</strong> Estruturas, Materiais, Solo e Gestão de Obras.</li>
+                    <li><i class="bi bi-check-circle-fill text-primary"></i> ✅ <strong>Tecnologia (TI):</strong> Desenvolvimento Python, Django, APIs e Banco de Dados.</li>
+                    <li><i class="bi bi-check-circle-fill text-primary"></i> ✅ <strong>Normas ABNT:</strong> Formatação completa e rigorosa.</li>
+                </ul>
+                <a href="https://wa.me/5562996466033?text=Olá! Preciso de ajuda com meu TCC." class="btn btn-primary px-4 shadow-sm">Solicitar Mentoria</a>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-4 shadow" alt="TCC Suporte">
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Programas de Estágio</h2>
+            <p class="text-muted">Prepare-se para entrar no mercado de trabalho com quem entende de Engenharia e Tecnologia.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card step-card shadow-sm p-4 text-center">
+                    <div class="feature-icon">📝</div>
+                    <h5 class="fw-bold">Currículo Estratégico</h5>
+                    <p class="small text-muted">Ajustamos seu currículo para passar em filtros de RH e destacar suas competências técnicas.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card step-card shadow-sm p-4 text-center">
+                    <div class="feature-icon">👷</div>
+                    <h5 class="fw-bold">Vivência Técnica</h5>
+                    <p class="small text-muted">Acompanhamento e dicas práticas para estagiários em canteiro de obras e escritórios.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card step-card shadow-sm p-4 text-center">
+                    <div class="feature-icon">💻</div>
+                    <h5 class="fw-bold">Portfólio em TI</h5>
+                    <p class="small text-muted">Orientação para criar seu portfólio no GitHub e se destacar em vagas de desenvolvimento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-dark text-white rounded-4 p-5 mt-5 text-center shadow">
+            <h3 class="fw-bold">Dúvidas sobre sua carreira acadêmica?</h3>
+            <p class="mb-4">Não deixe para a última hora. Agende uma conversa hoje mesmo.</p>
+            <a href="https://wa.me/5562996466033" class="btn btn-success btn-lg px-5">Falar com o Prof. Márcio</a>
         </div>
     </main>
 
@@ -39,6 +107,7 @@
     <a href="https://wa.me/5562996466033" style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 10px #999;z-index:1000;" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="margin-top: 12px;"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
     </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
