@@ -27,14 +27,14 @@
         /* CARDS */
         .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        .course-title { font-weight: 700; font-size: 0.9rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; }
+        .course-title { font-weight: 700; font-size: 0.85rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
         .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; cursor: pointer; }
 
         /* MODAL */
         .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
         .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
 
-        /* FOOTER */
+        /* FOOTER PADRÃO */
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
         .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
         .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
@@ -51,8 +51,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="academico.html">Academico</a></li>
                     <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
                     <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
@@ -63,14 +63,14 @@
 
     <header class="page-header">
         <div class="container">
-            <h1 class="display-6 fw-bold text-uppercase">Educação & Formação Acadêmica</h1>
-            <p class="lead opacity-75">80 Cursos de Extensão • Certificação de 40 Horas</p>
+            <h1 class="display-6 fw-bold text-uppercase">Educação & Acadêmico</h1>
+            <p class="lead opacity-75">Catálogo Completo de 100 Cursos • Certificação de 40 Horas</p>
         </div>
     </header>
 
     <section class="search-container sticky-top" style="top: 80px; z-index: 999;">
         <div class="container text-center">
-            <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Busque por Matemática, Química, Artes, Sociologia...">
+            <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Busque por Matemática, Pedagogia, Letras, Química...">
         </div>
     </section>
 
@@ -92,10 +92,10 @@
                     <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
                     <h6 class="fw-bold text-primary mb-3">Grade Curricular:</h6>
                     <ul id="m-lista" class="list-unstyled">
-                        <li class="mb-2">✅ <b>Unidade 1:</b> Fundamentos e Contexto Histórico</li>
-                        <li class="mb-2">✅ <b>Unidade 2:</b> Teorias e Metodologias Aplicadas</li>
-                        <li class="mb-2">✅ <b>Unidade 3:</b> Aplicações Práticas e Estudos de Caso</li>
-                        <li class="mb-2">✅ <b>Unidade 4:</b> Avaliação de Conhecimento e Certificação</li>
+                        <li class="mb-2">✅ <b>Unidade 1:</b> Fundamentos Teóricos e Históricos</li>
+                        <li class="mb-2">✅ <b>Unidade 2:</b> Desenvolvimento de Conteúdo Específico</li>
+                        <li class="mb-2">✅ <b>Unidade 3:</b> Aplicações Práticas e Didáticas</li>
+                        <li class="mb-2">✅ <b>Unidade 4:</b> Avaliação Final e Emissão de Certificado</li>
                     </ul>
                     <hr>
                     <a href="https://wa.me/5562996466033" target="_blank" class="btn btn-success w-100 fw-bold py-3 mt-3">CONSULTAR NO WHATSAPP</a>
@@ -106,7 +106,7 @@
 
     <footer class="mazz-footer">
         <div class="container">
-            <div class="fw-bold">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+            <div class="fw-bold">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
             <div class="footer-divider"></div>
             <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
         </div>
@@ -115,15 +115,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const dadosTrilhas = [
-            { trilha: "📐 MATEMÁTICA", cursos: ["Fundamentos de Matemática Básica", "Álgebra Elementar e Equações", "Geometria Plana e Espacial", "Trigonometria Aplicada", "Matemática Financeira", "Estatística Descritiva e Probabilidade", "Raciocínio Lógico Matemático", "Cálculo Diferencial e Integral I", "Cálculo Diferencial e Integral II", "Álgebra Linear e Geometria Analítica"] },
-            { trilha: "📚 LETRAS", cursos: ["Gramática Normativa", "Interpretação e Produção de Texto", "Redação Oficial e Empresarial", "Linguística Geral", "Literatura Brasileira", "Literatura Portuguesa", "Teoria e Análise do Discurso", "Morfossintaxe Avançada", "Ensino de Língua Portuguesa", "Técnicas de Oratória"] },
-            { trilha: "⚛️ FÍSICA", cursos: ["Fundamentos de Física Geral", "Mecânica Clássica", "Termologia e Termodinâmica", "Óptica Geométrica e Física", "Ondulatória", "Eletricidade e Magnetismo", "Física Moderna", "Física Nuclear e Radioatividade", "Física Aplicada à Engenharia", "Instrumentação e Medidas Físicas"] },
-            { trilha: "🧬 BIOLOGIA", cursos: ["Biologia Celular", "Genética Básica e Molecular", "Anatomia e Fisiologia Humana", "Microbiologia", "Botânica Geral", "Zoologia Geral", "Ecologia e Sustentabilidade", "Biotecnologia", "Imunologia", "Evolução e Biodiversidade"] },
-            { trilha: "⚗️ QUÍMICA", cursos: ["Fundamentos de Química Geral", "Estrutura Atômica e Tabela Periódica", "Ligações Químicas e Geometria", "Estequiometria e Cálculos", "Físico-Química", "Química Orgânica", "Química Analítica", "Química Ambiental e Industrial"] },
-            { trilha: "🌎 GEOGRAFIA", cursos: ["Fundamentos de Geografia Geral", "Geografia Física", "Geografia Humana e Econômica", "Cartografia e Geoprocessamento", "Geopolítica Mundial", "Urbanização e Espaço Urbano", "Geografia Agrária", "Meio Ambiente e Sustentabilidade"] },
-            { trilha: "🎨 ARTES", cursos: ["História da Arte Antiga e Medieval", "História da Arte Moderna e Contemporânea", "Fundamentos das Artes Visuais", "Técnicas de Desenho e Pintura", "Arte Brasileira", "Estética e Teoria da Arte", "Educação Artística e Metodologia", "Produção Cultural e Curadoria"] },
-            { trilha: "👥 SOCIOLOGIA", cursos: ["Fundamentos da Sociologia", "Teoria Sociológica Clássica", "Teoria Sociológica Contemporânea", "Sociologia da Educação", "Sociologia Urbana", "Cultura, Identidade e Sociedade", "Movimentos Sociais", "Metodologia da Pesquisa"] },
-            { trilha: "🏛️ FILOSOFIA", cursos: ["Introdução à Filosofia", "Filosofia Antiga", "Filosofia Medieval", "Filosofia Moderna", "Filosia Contemporânea", "Ética e Filosofia Moral", "Filosofia Política", "Lógica e Argumentação"] }
+            { trilha: "📚 FUNDAMENTOS DA PEDAGOGIA", cursos: ["Fundamentos da Educação e Teorias Pedagógicas", "História da Educação Brasileira", "Psicologia da Educação", "Didática Geral", "Currículo e Planejamento Educacional", "Avaliação da Aprendizagem", "Políticas Públicas Educacionais", "Educação Inclusiva e AEE"] },
+            { trilha: "🏫 PRÁTICAS EDUCACIONAIS", cursos: ["Alfabetização e Letramento", "Metodologias Ativas na Educação", "Educação Infantil: Teoria e Prática", "Anos Iniciais do Ensino Fundamental", "Tecnologias Digitais na Educação", "Educação de Jovens e Adultos (EJA)", "Educação Especial e Transtornos de Aprendizagem"] },
+            { trilha: "🏛️ GESTÃO E ESPECIALIZAÇÃO", cursos: ["Gestão Escolar e Coordenação Pedagógica", "Supervisão e Orientação Educacional", "Projeto Político-Pedagógico na Prática", "Formação Docente e Desenvolvimento", "Neuroeducação e Processos de Aprendizagem"] },
+            { trilha: "📐 MATEMÁTICA", cursos: ["Matemática Básica", "Álgebra Elementar", "Geometria Plana e Espacial", "Trigonometria Aplicada", "Matemática Financeira", "Estatística e Probabilidade", "Raciocínio Lógico", "Cálculo I", "Cálculo II", "Álgebra Linear"] },
+            { trilha: "📚 LETRAS", cursos: ["Gramática Normativa", "Interpretação de Texto", "Redação Oficial", "Linguística Geral", "Literatura Brasileira", "Literatura Portuguesa", "Teoria do Discurso", "Morfossintaxe", "Ensino de Língua Portuguesa", "Oratória e Comunicação"] },
+            { trilha: "⚗️ QUÍMICA", cursos: ["Química Geral", "Estrutura Atômica", "Ligações Químicas", "Estequiometria", "Físico-Química", "Química Orgânica", "Química Analítica", "Química Ambiental"] },
+            { trilha: "⚛️ FÍSICA", cursos: ["Física Geral", "Mecânica Clássica", "Termologia", "Óptica", "Ondulatória", "Eletromagnetismo", "Física Moderna", "Física Nuclear", "Física Aplicada", "Instrumentação"] },
+            { trilha: "🧬 BIOLOGIA", cursos: ["Biologia Celular", "Genética", "Anatomia Humana", "Microbiologia", "Botânica", "Zoologia", "Ecologia", "Biotecnologia", "Imunologia", "Evolução"] },
+            { trilha: "🌎 GEOGRAFIA", cursos: ["Geografia Geral", "Geografia Física", "Geografia Humana", "Cartografia", "Geopolítica Mundial", "Urbanização", "Geografia Agrária", "Meio Ambiente"] },
+            { trilha: "🎨 ARTES", cursos: ["História da Arte Antiga", "História da Arte Moderna", "Artes Visuais", "Desenho e Pintura", "Arte Brasileira", "Estética", "Educação Artística", "Produção Cultural"] },
+            { trilha: "👥 SOCIOLOGIA", cursos: ["Fundamentos Sociológicos", "Teoria Clássica", "Teoria Contemporânea", "Sociologia da Educação", "Sociologia Urbana", "Cultura e Identidade", "Movimentos Sociais", "Metodologia de Pesquisa"] },
+            { trilha: "🏛️ FILOSOFIA", cursos: ["Introdução à Filosofia", "Filosofia Antiga", "Filosofia Medieval", "Filosofia Moderna", "Filosia Contemporânea", "Ética", "Filosofia Política", "Lógica"] }
         ];
 
         const container = document.getElementById('trilhas-container');
@@ -138,7 +141,7 @@
                 
                 t.cursos.forEach(c => {
                     if (c.toLowerCase().includes(f.toLowerCase())) {
-                        content += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy" onclick="abrir('${c}')">Consultar</button></div></div>`;
+                        content += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy" onclick="abrirEmenta('${c}')">Consultar</button></div></div>`;
                         total++; has = true;
                     }
                 });
@@ -149,8 +152,8 @@
             document.getElementById('noResults').classList.toggle('d-none', total > 0);
         }
 
-        function abrir(t) {
-            document.getElementById('m-titulo').innerText = t;
+        function abrirEmenta(titulo) {
+            document.getElementById('m-titulo').innerText = titulo;
             new bootstrap.Modal(document.getElementById('modalEmenta')).show();
         }
 

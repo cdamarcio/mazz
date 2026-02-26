@@ -7,33 +7,54 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; }
+        :root { 
+            --mazz-blue: #001f3f; 
+            --mazz-gold: #ffc107; 
+            --mazz-dark: #00152b; 
+            --mazz-gray: #6c757d; 
+        }
+        
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
+
+        /* NAVBAR PADRÃO MAZZ */
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
+
+        /* HEADER E BUSCA */
         .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 40px 0; border-bottom: 5px solid var(--mazz-gold); text-align: center; }
         .search-container { background: #f4f7f9; padding: 30px 0; border-bottom: 1px solid #eee; margin-bottom: 20px; }
-        .search-input { border: 2px solid var(--mazz-blue); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 1.1rem; outline: none; }
-        .search-input:focus { border-color: var(--mazz-gold); box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2); }
+        .search-input { border: 2px solid var(--mazz-blue); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 1.1rem; outline: none; transition: 0.3s; }
+
+        /* TRILHAS */
         .trilha-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1.3rem; }
         .nivel-label { font-weight: 800; font-size: 0.85rem; color: var(--mazz-gray); margin: 20px 0 10px; display: block; border-bottom: 1px solid #eee; padding-bottom: 5px; text-transform: uppercase; }
+        
+        /* CARDS */
         .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        .course-title { font-weight: 700; font-size: 0.9rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; }
-        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; cursor: pointer; transition: 0.3s; }
-        .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
+        .course-title { font-weight: 700; font-size: 0.9rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; cursor: pointer; }
+
+        /* MODAL */
+        .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
+        .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
+
+        /* FOOTER */
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
         .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
         .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MAZZ</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -47,13 +68,45 @@
         </div>
     </nav>
 
-    <header class="page-header"><div class="container"><h1 class="display-6 fw-bold">ENGENHARIAS</h1><p class="lead">Trilhas de Especialização • Certificação 40h</p></div></header>
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-6 fw-bold text-uppercase">Engenharias</h1>
+            <p class="lead opacity-75">Especializações Técnicas e Perícias Judiciais por Área • 40h</p>
+        </div>
+    </header>
 
     <section class="search-container sticky-top" style="top: 80px; z-index: 999;">
-        <div class="container text-center"><input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Busque por curso, NR ou Nível..."></div>
+        <div class="container text-center">
+            <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Busque por Perícia, Elétrica, Ambiental, Segurança...">
+        </div>
     </section>
 
-    <main class="container mb-5 flex-grow-1"><div id="trilhas-container"></div></main>
+    <main class="container mb-5 flex-grow-1">
+        <div id="trilhas-container"></div>
+    </main>
+
+    <div class="modal fade" id="modalEmenta" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="m-titulo">EMENTA DO CURSO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
+                    <h6 class="fw-bold text-primary mb-3">Conteúdo Programático:</h6>
+                    <ul id="m-lista" class="list-unstyled">
+                        <li class="mb-2">✅ <b>Unidade 1:</b> Fundamentos Jurídicos para Engenheiros</li>
+                        <li class="mb-2">✅ <b>Unidade 2:</b> Nomeação, Honorários e Prazos Processuais</li>
+                        <li class="mb-2">✅ <b>Unidade 3:</b> Coleta de Provas e Metodologia Científica</li>
+                        <li class="mb-2">✅ <b>Unidade 4:</b> Redação de Laudos Técnicos e Quesitos Periciais</li>
+                    </ul>
+                    <hr>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn btn-success w-100 fw-bold py-3 mt-3">CONSULTAR NO WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="mazz-footer">
         <div class="container">
@@ -66,14 +119,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const dadosTrilhas = [
-            { trilha: "🎓 TRILHA 1 — ESTRUTURAS", niveis: [ { nome: "🔹 Básico", cursos: ["Mecânica dos Solos Aplicada", "Tecnologia do Concreto Avançada", "Ensaios Laboratoriais"] }, { nome: "🔹 Intermediário", cursos: ["Projeto Concreto (NBR 6118)", "Estruturas em Aço (NBR 8800)", "Projeto de Fundações"] }, { nome: "🔹 Avançado", cursos: ["Análise Elementos Finitos", "Cálculo TQS/Eberick", "Lajes Protendidas"] } ] },
-            { trilha: "🏗️ TRILHA 2 — GESTÃO E OBRAS", niveis: [ { nome: "🔹 Básico", cursos: ["Execução de Obras Civis", "NR-18 Segurança"] }, { nome: "🔹 Intermediário", cursos: ["Gestão e Planejamento", "Orçamento SINAPI/TCPO"] }, { nome: "🔹 Avançado", cursos: ["Power BI para Obras", "Excel para Engenheiros"] } ] },
-            { trilha: "🌱 TRILHA 6 — AMBIENTAL", niveis: [ { nome: "🔹 Básico", cursos: ["Licenciamento Ambiental", "Gestão de Resíduos"] }, { nome: "🔹 Avançado", cursos: ["Créditos de Carbono", "Estratégias ESG", "Auditoria Ambiental"] } ] },
-            { trilha: "🛡️ TRILHA 7 — SEGURANÇA", niveis: [ { nome: "🔹 Básico", cursos: ["Prevenção Incêndios", "EPI/EPC"] }, { nome: "🔹 Intermediário", cursos: ["NR-10 Elétrica", "NR-35 Altura"] }, { nome: "🔹 Avançado", cursos: ["Gestão PGR/GRO", "eSocial para SST"] } ] }
+            { trilha: "🎓 TRILHA 1 — ESTRUTURAS E CIVIL", niveis: [ { nome: "🔹 Perícia", cursos: ["Perícia Judicial para Engenheiros Civis"] }, { nome: "🔹 Nível Básico", cursos: ["Mecânica dos Solos Aplicada", "Tecnologia do Concreto Avançada"] }, { nome: "🔹 Intermediário/Avançado", cursos: ["Projeto Concreto (NBR 6118)", "Estruturas em Aço (NBR 8800)", "Cálculo TQS/Eberick"] } ] },
+            { trilha: "⚡ TRILHA 2 — ELÉTRICA", niveis: [ { nome: "🔹 Perícia", cursos: ["Perícia Judicial para Engenheiros Eletricistas"] }, { nome: "🔹 Intermediário", cursos: ["NR-10 Elétrica", "NR-10 SEP", "Projetos de Instalações Elétricas"] } ] },
+            { trilha: "🛡️ TRILHA 3 — SEGURANÇA DO TRABALHO", niveis: [ { nome: "🔹 Perícia", cursos: ["Perícia Judicial para Engenheiros de Seg. do Trabalho"] }, { nome: "🔹 Técnico", cursos: ["Higiene Ocupacional", "NR-35 Altura", "PGR e GRO"] } ] },
+            { trilha: "🌱 TRILHA 4 — AMBIENTAL", niveis: [ { nome: "🔹 Perícia", cursos: ["Perícia Judicial para Engenheiros Ambientais"] }, { nome: "🔹 Especialização", cursos: ["Licenciamento Ambiental", "Gestão de Resíduos", "Estratégias ESG"] } ] },
+            { trilha: "🏗️ TRILHA 5 — GESTÃO E OBRAS", niveis: [ { nome: "🔹 Nível Básico", cursos: ["Execução de Obras Civis", "Segurança na Obra (NR-18)"] }, { nome: "🔹 Intermediário", cursos: ["Planejamento de Obras", "Orçamento SINAPI/TCPO"] } ] },
+            { trilha: "🏢 TRILHA 6 — PATOLOGIAS", niveis: [ { nome: "🔹 Especialização", cursos: ["Patologias das Construções", "Inspeção Predial", "Avaliação de Imóveis"] } ] },
+            { trilha: "🖥️ TRILHA 7 — TECNOLOGIA E BIM", niveis: [ { nome: "🔹 Intermediário", cursos: ["AutoCAD Avançado", "Revit Estrutural", "BIM Aplicado"] } ] }
         ];
+
         const container = document.getElementById('trilhas-container');
         function render(f = "") {
             container.innerHTML = "";
+            let total = 0;
             dadosTrilhas.forEach(t => {
                 let html = `<div>`;
                 let has = false;
@@ -83,8 +141,8 @@
                     let count = 0;
                     n.cursos.forEach(c => {
                         if (c.toLowerCase().includes(f.toLowerCase())) {
-                            nHtml += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy">Consultar</button></div></div>`;
-                            count++; has = true;
+                            nHtml += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy" onclick="abrirEmenta('${c}')">Consultar</button></div></div>`;
+                            count++; total++; has = true;
                         }
                     });
                     if (count > 0) content += nHtml + `</div>`;
@@ -92,6 +150,12 @@
                 if (has) container.innerHTML += html + content + `</div>`;
             });
         }
+
+        function abrirEmenta(titulo) {
+            document.getElementById('m-titulo').innerText = titulo;
+            new bootstrap.Modal(document.getElementById('modalEmenta')).show();
+        }
+
         document.getElementById('searchInput').addEventListener('input', (e) => render(e.target.value));
         render();
     </script>
