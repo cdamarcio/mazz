@@ -27,13 +27,13 @@
         .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
         .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
         .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
-        .modal-title { font-weight: 800; text-transform: uppercase; font-size: 1.1rem; }
         .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
-        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
+        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; transition: 0.3s; }
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MAZZ</a>
@@ -53,7 +53,7 @@
     <header class="page-header text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">EDUCAÇÃO & PEDAGOGIA</h1>
-            <p class="lead opacity-75">Explore 100 cursos de formação continuada com certificação 40h.</p>
+            <p class="lead opacity-75">100 Formações especializadas para o novo cenário educacional - Certificado 40h.</p>
         </div>
     </header>
 
@@ -70,37 +70,89 @@
                 </div>
                 <div class="modal-body p-4">
                     <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
-                    <h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6>
+                    <h6 class="fw-bold mb-3 text-primary">Ementa Curricular:</h6>
                     <ul id="modalEmenta" class="list-unstyled"></ul>
-                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR NO WHATSAPP</a>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">FALAR COM CONSULTOR NO WHATSAPP</a>
                 </div>
             </div>
         </div>
     </div>
 
     <footer class="mazz-footer">
-        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const cursosEdu = [
-            { t: "Metodologias Ativas", c: "Pedagogia" }, { t: "Gestão e Coordenação Escolar", c: "Gestão" }, { t: "Educação Especial Inclusiva", c: "Inclusão" },
-            { t: "Tecnologias Educacionais", c: "Inovação" }, { t: "Alfabetização e Letramento", c: "Docência" }, { t: "BNCC na Prática", c: "Normativa" },
-            { t: "Psicopedagogia Clínica", c: "Saúde" }, { t: "Ludicidade no Ensino", c: "Pedagogia" }, { t: "Direito Educacional", c: "Gestão" }, { t: "Avaliação da Aprendizagem", c: "Docência" },
-            { t: "Neurociência na Educação", c: "Saúde" }, { t: "Libras para Docentes", c: "Inclusão" }, { t: "Inteligência Emocional Escolar", c: "Gestão" },
-            { t: "Gamificação no Ensino Fundamental", c: "Inovação" }, { t: "Educação Bilíngue", c: "Inovação" }, { t: "Políticas Públicas", c: "Normativa" }
+            { t: "Metodologias Ativas na Prática", c: "Docência" }, 
+            { t: "Gestão e Coordenação Pedagógica", c: "Gestão" }, 
+            { t: "Educação Especial Inclusiva", c: "Inclusão" },
+            { t: "Tecnologias Educacionais e IA", c: "Inovação" }, 
+            { t: "Alfabetização e Letramento", c: "Docência" }, 
+            { t: "BNCC: Do Planejamento à Sala de Aula", c: "Normativa" },
+            { t: "Psicopedagogia Institucional", c: "Saúde" }, 
+            { t: "Ludicidade e Recreação Infantil", c: "Infantil" }, 
+            { t: "Direito Educacional e Legislação", c: "Gestão" }, 
+            { t: "Neurociência da Aprendizagem", c: "Saúde" },
+            { t: "Educação de Jovens e Adultos (EJA)", c: "Docência" },
+            { t: "Atendimento Educacional Especializado", c: "Inclusão" },
+            { t: "Libras e Comunicação Inclusiva", c: "Inclusão" },
+            { t: "Bullying e Mediação de Conflitos", c: "Gestão" },
+            { t: "Educação Digital e Cidadania", c: "Inovação" },
+            { t: "Avaliação Escolar e Desempenho", c: "Docência" },
+            { t: "Psicomotricidade no Ensino", c: "Saúde" },
+            { t: "Marketing para Escolas", c: "Gestão" },
+            { t: "Transtornos de Aprendizagem (TDAH)", c: "Inclusão" },
+            { t: "Educação Ambiental e Sustentabilidade", c: "Docência" },
+            { t: "Literatura Infantil e Contação", c: "Infantil" },
+            { t: "Planejamento Pedagógico Estratégico", c: "Gestão" },
+            { t: "Ensino Híbrido e Gamificação", c: "Inovação" },
+            { t: "Políticas Públicas na Educação", c: "Normativa" },
+            { t: "Ética e Filosofia na Educação", c: "Docência" },
+            { t: "Educação Física Escolar", c: "Docência" },
+            { t: "Artes e Musicalização Infantil", c: "Infantil" },
+            { t: "Sociologia da Educação", c: "Docência" },
+            { t: "Gestão Financeira Escolar", c: "Gestão" },
+            { t: "Inteligência Emocional no Ensino", c: "Docência" }
         ];
-        while(cursosEdu.length < 100) { cursosEdu.push({ t: "Especialização Pedagógica " + (cursosEdu.length + 1), c: "Educação" }); }
+
+        // Geração de 100 cursos sem numeração
+        const bases = ["Fundamentos de", "Novas Práticas em", "Especialização em", "Docência e", "Gestão de"];
+        const temas = ["Artes Visuais", "Música na Escola", "Culinária Pedagógica", "Horta Escolar", "Educação para o Trânsito", "Ética e Valores"];
+        
+        while(cursosEdu.length < 100) {
+            let b = bases[Math.floor(Math.random() * bases.length)];
+            let t = temas[Math.floor(Math.random() * temas.length)];
+            let nome = `${b} ${t} ${cursosEdu.length > 50 ? 'Avançado' : 'Especialista'}`;
+            if(!cursosEdu.find(x => x.t === nome)) {
+                cursosEdu.push({ t: nome, c: "Educação" });
+            }
+        }
 
         const container = document.getElementById('cursos-container');
         cursosEdu.forEach((c, i) => {
             container.innerHTML += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card shadow-sm"><span class="category-label">${c.c}</span><h6 class="course-title">${c.t}</h6><button class="btn-buy" onclick="abrirEmenta(${i})">Consultar</button></div></div>`;
         });
+
         function abrirEmenta(i) {
-            const c = cursosEdu[i];
-            document.getElementById('modalTitulo').innerText = c.t;
-            document.getElementById('modalEmenta').innerHTML = `<li>• Módulo 1: Fundamentos teóricos</li><li>• Módulo 2: Estratégias Pedagógicas</li><li>• Módulo 3: Práticas e Vivências</li><li>• Módulo 4: Avaliação e Certificado 40h</li>`;
+            const curso = cursosEdu[i];
+            const titulo = curso.t;
+            document.getElementById('modalTitulo').innerText = titulo;
+            
+            let mod2 = "Estratégias de Intervenção Pedagógica";
+            if(titulo.includes("Inclusiva") || titulo.includes("Especial")) mod2 = "Adaptação Curricular e Acessibilidade";
+            if(titulo.includes("Gestão") || titulo.includes("Direito")) mod2 = "Liderança e Administração Escolar";
+            if(titulo.includes("Alfabetização")) mod2 = "Processos Cognitivos da Leitura e Escrita";
+            if(titulo.includes("Tecnologias") || titulo.includes("IA")) mod2 = "Ferramentas Digitais e Gamificação";
+            if(titulo.includes("Infantil")) mod2 = "O Brincar e as Interações na Primeira Infância";
+
+            document.getElementById('modalEmenta').innerHTML = `
+                <li>• Módulo 1: Contextualização e Histórico de ${titulo}</li>
+                <li>• Módulo 2: ${mod2}</li>
+                <li>• Módulo 3: Planejamento e BNCC</li>
+                <li>• Módulo 4: Avaliação da Aprendizagem e Certificado 40h</li>`;
+            
             new bootstrap.Modal(document.getElementById('ementaModal')).show();
         }
     </script>
