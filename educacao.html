@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educação & Pedagogia - MAZZ</title>
+    <title>Educação - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --mazz-blue: #001f3f;
-            --mazz-gold: #ffc107;
-            --mazz-dark: #00152b;
-            --mazz-gray: #6c757d;
-            --mazz-light: #f8f9fa;
-        }
+        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; --mazz-light: #f8f9fa; }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
         .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); margin-bottom: 40px; }
+        .category-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1.2rem; }
         .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        .category-label { background: var(--mazz-light); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; align-self: center; margin-bottom: 10px; text-transform: uppercase; }
-        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
+        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 10px; line-height: 1.3; }
+        .course-desc { font-size: 0.8rem; color: var(--mazz-gray); margin-bottom: 15px; flex-grow: 1; }
         .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
         .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
         .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
         .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
-        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; transition: 0.3s; }
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
+        .footer-copyright { font-weight: 700; color: var(--mazz-dark); }
+        .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
+        .footer-dev { font-size: 0.8rem; color: var(--mazz-gray); }
+        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -37,6 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MAZZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -52,108 +51,65 @@
 
     <header class="page-header text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">EDUCAÇÃO & PEDAGOGIA</h1>
-            <p class="lead opacity-75">100 Formações especializadas para o novo cenário educacional - Certificado 40h.</p>
+            <h1 class="display-5 fw-bold text-uppercase">Educação & Pedagogia</h1>
+            <p class="lead opacity-75">Formação Continuada de Elite com Certificado 40h</p>
         </div>
     </header>
 
     <main class="container mb-5 flex-grow-1">
-        <div id="cursos-container" class="row g-3 justify-content-center"></div>
+        <div id="cursos-container"></div>
     </main>
 
-    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalEmenta" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 rounded-4 shadow">
-                <div class="modal-header rounded-top-4">
-                    <h5 class="modal-title" id="modalTitulo">CURSO</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="m-titulo">DETALHES DO CURSO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body p-4">
+                <div class="modal-body p-4 text-center">
                     <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
-                    <h6 class="fw-bold mb-3 text-primary">Ementa Curricular:</h6>
-                    <ul id="modalEmenta" class="list-unstyled"></ul>
-                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">FALAR COM CONSULTOR NO WHATSAPP</a>
+                    <h6 class="fw-bold text-primary mb-3">Grade Curricular:</h6>
+                    <ul id="m-lista" class="list-unstyled text-start mx-auto" style="max-width: 300px;"></ul>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn btn-success w-100 fw-bold py-3 mt-3">CONSULTAR NO WHATSAPP</a>
                 </div>
             </div>
         </div>
     </div>
 
     <footer class="mazz-footer">
-        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
+        <div class="container">
+            <div class="footer-copyright">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+            <div class="footer-divider"></div>
+            <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const cursosEdu = [
-            { t: "Metodologias Ativas na Prática", c: "Docência" }, 
-            { t: "Gestão e Coordenação Pedagógica", c: "Gestão" }, 
-            { t: "Educação Especial Inclusiva", c: "Inclusão" },
-            { t: "Tecnologias Educacionais e IA", c: "Inovação" }, 
-            { t: "Alfabetização e Letramento", c: "Docência" }, 
-            { t: "BNCC: Do Planejamento à Sala de Aula", c: "Normativa" },
-            { t: "Psicopedagogia Institucional", c: "Saúde" }, 
-            { t: "Ludicidade e Recreação Infantil", c: "Infantil" }, 
-            { t: "Direito Educacional e Legislação", c: "Gestão" }, 
-            { t: "Neurociência da Aprendizagem", c: "Saúde" },
-            { t: "Educação de Jovens e Adultos (EJA)", c: "Docência" },
-            { t: "Atendimento Educacional Especializado", c: "Inclusão" },
-            { t: "Libras e Comunicação Inclusiva", c: "Inclusão" },
-            { t: "Bullying e Mediação de Conflitos", c: "Gestão" },
-            { t: "Educação Digital e Cidadania", c: "Inovação" },
-            { t: "Avaliação Escolar e Desempenho", c: "Docência" },
-            { t: "Psicomotricidade no Ensino", c: "Saúde" },
-            { t: "Marketing para Escolas", c: "Gestão" },
-            { t: "Transtornos de Aprendizagem (TDAH)", c: "Inclusão" },
-            { t: "Educação Ambiental e Sustentabilidade", c: "Docência" },
-            { t: "Literatura Infantil e Contação", c: "Infantil" },
-            { t: "Planejamento Pedagógico Estratégico", c: "Gestão" },
-            { t: "Ensino Híbrido e Gamificação", c: "Inovação" },
-            { t: "Políticas Públicas na Educação", c: "Normativa" },
-            { t: "Ética e Filosofia na Educação", c: "Docência" },
-            { t: "Educação Física Escolar", c: "Docência" },
-            { t: "Artes e Musicalização Infantil", c: "Infantil" },
-            { t: "Sociologia da Educação", c: "Docência" },
-            { t: "Gestão Financeira Escolar", c: "Gestão" },
-            { t: "Inteligência Emocional no Ensino", c: "Docência" }
+        const eduData = [
+            { categoria: "🍎 PRÁTICAS PEDAGÓGICAS", cursos: [
+                { t: "Metodologias Ativas", d: "Inovação no processo de ensino-aprendizagem." },
+                { t: "Alfabetização e Letramento", d: "Práticas fundamentais para o ensino básico." }
+            ]},
+            { categoria: "🏢 GESTÃO ESCOLAR", cursos: [
+                { t: "Coordenação Pedagógica", d: "Liderança e planejamento em unidades escolares." },
+                { t: "Direito Educacional", d: "Legislação e normas aplicadas à educação." }
+            ]}
         ];
-
-        // Geração de 100 cursos sem numeração
-        const bases = ["Fundamentos de", "Novas Práticas em", "Especialização em", "Docência e", "Gestão de"];
-        const temas = ["Artes Visuais", "Música na Escola", "Culinária Pedagógica", "Horta Escolar", "Educação para o Trânsito", "Ética e Valores"];
-        
-        while(cursosEdu.length < 100) {
-            let b = bases[Math.floor(Math.random() * bases.length)];
-            let t = temas[Math.floor(Math.random() * temas.length)];
-            let nome = `${b} ${t} ${cursosEdu.length > 50 ? 'Avançado' : 'Especialista'}`;
-            if(!cursosEdu.find(x => x.t === nome)) {
-                cursosEdu.push({ t: nome, c: "Educação" });
-            }
-        }
-
         const container = document.getElementById('cursos-container');
-        cursosEdu.forEach((c, i) => {
-            container.innerHTML += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card shadow-sm"><span class="category-label">${c.c}</span><h6 class="course-title">${c.t}</h6><button class="btn-buy" onclick="abrirEmenta(${i})">Consultar</button></div></div>`;
+        eduData.forEach(cat => {
+            let html = `<h3 class="category-title">${cat.categoria}</h3><div class="row g-3">`;
+            cat.cursos.forEach(c => {
+                html += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c.t}</div><div class="course-desc">${c.d}</div><button class="btn-buy" onclick="abrir('${c.t}')">Consultar</button></div></div>`;
+            });
+            html += `</div>`;
+            container.innerHTML += html;
         });
-
-        function abrirEmenta(i) {
-            const curso = cursosEdu[i];
-            const titulo = curso.t;
-            document.getElementById('modalTitulo').innerText = titulo;
-            
-            let mod2 = "Estratégias de Intervenção Pedagógica";
-            if(titulo.includes("Inclusiva") || titulo.includes("Especial")) mod2 = "Adaptação Curricular e Acessibilidade";
-            if(titulo.includes("Gestão") || titulo.includes("Direito")) mod2 = "Liderança e Administração Escolar";
-            if(titulo.includes("Alfabetização")) mod2 = "Processos Cognitivos da Leitura e Escrita";
-            if(titulo.includes("Tecnologias") || titulo.includes("IA")) mod2 = "Ferramentas Digitais e Gamificação";
-            if(titulo.includes("Infantil")) mod2 = "O Brincar e as Interações na Primeira Infância";
-
-            document.getElementById('modalEmenta').innerHTML = `
-                <li>• Módulo 1: Contextualização e Histórico de ${titulo}</li>
-                <li>• Módulo 2: ${mod2}</li>
-                <li>• Módulo 3: Planejamento e BNCC</li>
-                <li>• Módulo 4: Avaliação da Aprendizagem e Certificado 40h</li>`;
-            
-            new bootstrap.Modal(document.getElementById('ementaModal')).show();
+        function abrir(t) {
+            document.getElementById('m-titulo').innerText = t;
+            document.getElementById('m-lista').innerHTML = `<li>• Módulo I</li><li>• Módulo II</li><li>• Metodologia</li><li>• Certificação 40h</li>`;
+            new bootstrap.Modal(document.getElementById('modalEmenta')).show();
         }
     </script>
 </body>

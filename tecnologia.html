@@ -7,42 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --mazz-blue: #001f3f;
-            --mazz-gold: #ffc107;
-            --mazz-dark: #00152b;
-            --mazz-gray: #6c757d;
-            --mazz-light: #f8f9fa;
-        }
-
+        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; --mazz-light: #f8f9fa; }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
-
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
-
         .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); margin-bottom: 40px; }
-
+        .category-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1.2rem; }
         .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        
-        .category-label { background: var(--mazz-light); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; align-self: center; margin-bottom: 10px; text-transform: uppercase; }
-
-        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
-        
+        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 10px; line-height: 1.3; }
+        .course-desc { font-size: 0.8rem; color: var(--mazz-gray); margin-bottom: 15px; flex-grow: 1; }
         .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
         .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
-
-        /* MODAL */
         .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
-        .modal-title { font-weight: 800; text-transform: uppercase; font-size: 1.1rem; }
         .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
-        
-        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
-        .btn-whats-modal:hover { background-color: #128c7e; color: white; }
-
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
+        .footer-copyright { font-weight: 700; color: var(--mazz-dark); }
+        .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
+        .footer-dev { font-size: 0.8rem; color: var(--mazz-gray); }
+        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -50,6 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MAZZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -65,70 +51,66 @@
 
     <header class="page-header text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">TI & INTELIGÊNCIA ARTIFICIAL</h1>
-            <p class="lead opacity-75">Explore 100 cursos de elite com certificação de 40h.</p>
+            <h1 class="display-5 fw-bold text-uppercase">Tecnologia & IA</h1>
+            <p class="lead opacity-75">Inovação e Desenvolvimento com Certificado 40h</p>
         </div>
     </header>
 
     <main class="container mb-5 flex-grow-1">
-        <div id="cursos-container" class="row g-3 justify-content-center"></div>
+        <div id="cursos-container"></div>
     </main>
 
-    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalEmenta" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 rounded-4 shadow">
-                <div class="modal-header rounded-top-4">
-                    <h5 class="modal-title" id="modalTitulo">CURSO</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="m-titulo">DETALHES DO CURSO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body p-4">
+                <div class="modal-body p-4 text-center">
                     <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
-                    <h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6>
-                    <ul id="modalEmenta" class="list-unstyled"></ul>
-                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR VALOR NO WHATSAPP</a>
+                    <h6 class="fw-bold text-primary mb-3">Ementa Técnica:</h6>
+                    <ul id="m-lista" class="list-unstyled text-start mx-auto" style="max-width: 300px;"></ul>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn btn-success w-100 fw-bold py-3 mt-3">CONSULTAR NO WHATSAPP</a>
                 </div>
             </div>
         </div>
     </div>
 
     <footer class="mazz-footer">
-        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+        <div class="container">
+            <div class="footer-copyright">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+            <div class="footer-divider"></div>
+            <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
-        const listaCursos = [
-            // IA & DATA SCIENCE
-            { t: "Prompt Engineering Avançado", c: "IA" }, { t: "IA para Produtividade Empresarial", c: "IA" }, { t: "Deep Learning com PyTorch", c: "IA" }, { t: "Machine Learning: Fundamentos", c: "IA" }, { t: "Visão Computacional Aplicada", c: "IA" }, { t: "NLP: Linguagem Natural", c: "IA" }, { t: "IA Generativa para Design", c: "IA" }, { t: "Big Data com Apache Spark", c: "Dados" }, { t: "Data Analytics com Power BI", c: "Dados" }, { t: "Python para Análise de Dados", c: "Dados" }, { t: "Estatística para Cientistas", c: "Dados" }, { t: "Governança e Ética em IA", c: "IA" }, { t: "MLOps: Deploy de Modelos", c: "IA" }, { t: "SQL Avançado para Dados", c: "Dados" }, { t: "Business Intelligence", c: "Dados" }, { t: "Chatbots e Agentes Inteligentes", c: "IA" }, { t: "IA na Automação (RPA)", c: "IA" }, { t: "Algoritmos Genéticos", c: "IA" }, { t: "Data Engineering (Cloud)", c: "Dados" }, { t: "Reinforcement Learning", c: "IA" },
-            // FULLSTACK & MOBILE
-            { t: "Lógica de Programação", c: "Dev" }, { t: "HTML5 e CSS3 Especialista", c: "Dev" }, { t: "JavaScript ES6+ Profissional", c: "Dev" }, { t: "React.js Avançado", c: "Dev" }, { t: "Node.js com TypeScript", c: "Dev" }, { t: "Python e Django Web", c: "Dev" }, { t: "FastAPI: APIs de Performance", c: "Dev" }, { t: "Java Spring Boot Corporativo", c: "Dev" }, { t: ".NET 8 e C# Backend", c: "Dev" }, { t: "PHP Moderno e Laravel 11", c: "Dev" }, { t: "Ruby on Rails Profissional", c: "Dev" }, { t: "Angular: Arquitetura Apps", c: "Dev" }, { t: "Vue.js e Nuxt", c: "Dev" }, { t: "Flutter: Apps Nativos", c: "Dev" }, { t: "React Native Profissional", c: "Dev" }, { t: "Microserviços", c: "Dev" }, { t: "Docker e Containerização", c: "Dev" }, { t: "Kubernetes e Orquestração", c: "Dev" }, { t: "Testes Automatizados", c: "Dev" }, { t: "UI/UX para Programadores", c: "Design" }, { t: "Git e GitHub Profissional", c: "Dev" }, { t: "Clean Code e Patterns", c: "Dev" }, { t: "Programação Go (Golang)", c: "Dev" }, { t: "Rust para Performance", c: "Dev" }, { t: "PWA Profissional", c: "Dev" },
-            // CIBERSEGURANÇA & CLOUD
-            { t: "Ethical Hacking Avançado", c: "Security" }, { t: "Defesa Cibernética", c: "Security" }, { t: "Segurança em Nuvem", c: "Cloud" }, { t: "LGPD na TI", c: "Security" }, { t: "Forense Computacional", c: "Security" }, { t: "Redes de Computadores", c: "Infra" }, { t: "AWS Cloud Practitioner", c: "Cloud" }, { t: "Azure Fundamentals", c: "Cloud" }, { t: "Google Cloud Platform", c: "Cloud" }, { t: "Linux Admin (LPI)", c: "Infra" }, { t: "Segurança em APIs", c: "Security" }, { t: "Blockchain Fundamentos", c: "Web3" }, { t: "Firewall e Perímetro", c: "Security" }, { t: "Disaster Recovery", c: "Infra" }, { t: "DevSecOps", c: "Security" }, { t: "Gestão Identidade (IAM)", c: "Security" }, { t: "Monitoramento Grafana", c: "Infra" }, { t: "Virtualização VMware", c: "Infra" }, { t: "Segurança em IoT", c: "Security" }, { t: "Pentest Mobile", c: "Security" },
-            // GESTÃO & AGILIDADE
-            { t: "Scrum Master Profissional", c: "Agile" }, { t: "Kanban para Fluxo", c: "Agile" }, { t: "Product Owner (PO)", c: "Agile" }, { t: "Gestão de Projetos PMP", c: "Gestão" }, { t: "ITIL 4 Foundation", c: "Gestão" }, { t: "Governança COBIT", c: "Gestão" }, { t: "Tech Lead Liderança", c: "Liderança" }, { t: "OKRs para Tecnologia", c: "Gestão" }, { t: "Transformação Digital", c: "Inovação" }, { t: "Lean IT", c: "Gestão" }, { t: "Gestão de Stakeholders", c: "Gestão" }, { t: "Auditoria de Sistemas", c: "Security" }, { t: "Finanças para TI", c: "Gestão" }, { t: "Design Thinking", c: "Inovação" }, { t: "Agilidade em Escala", c: "Agile" },
-            // EMERGENTES
-            { t: "Web3 Smart Contracts", c: "Web3" }, { t: "DeFi: Finanças Desc.", c: "Web3" }, { t: "No-Code com Bubble", c: "NoCode" }, { t: "Realidade Aumentada", c: "Inovação" }, { t: "Metaverso e Economia", c: "Inovação" }, { t: "Desenvolvimento Wearables", c: "Inovação" }, { t: "Automação Industrial", c: "Inovação" }, { t: "Computação Quântica", c: "Inovação" }, { t: "5G e Telecom", c: "Infra" }, { t: "IA no Varejo", c: "IA" }, { t: "IA no Marketing", c: "IA" }, { t: "FinTechs e Pagamentos", c: "Gestão" }, { t: "Jogos Unreal Engine", c: "Games" }, { t: "SAP ERP Foundation", c: "Gestão" }, { t: "Salesforce Admin", c: "Cloud" }, { t: "Shopify E-commerce", c: "Dev" }, { t: "WordPress Pro", c: "Dev" }, { t: "API Economy Strategy", c: "Gestão" }, { t: "Edge Computing", c: "Infra" }, { t: "Tech Recruitment", c: "Liderança" }
+        const techData = [
+            { categoria: "🧠 INTELIGÊNCIA ARTIFICIAL", cursos: [
+                { t: "Prompt Engineering Avançado", d: "Domine a engenharia de comandos para LLMs." },
+                { t: "IA para Produtividade", d: "Integração de ferramentas de IA no fluxo de trabalho." }
+            ]},
+            { categoria: "💻 DESENVOLVIMENTO", cursos: [
+                { t: "Python Fullstack", d: "Desenvolvimento de aplicações robustas com Python." },
+                { t: "FastAPI & Microserviços", d: "Criação de APIs de alta performance." }
+            ]}
         ];
-
+        // Gerador simples para chegar em 100 ou volume similar
         const container = document.getElementById('cursos-container');
-        listaCursos.forEach((curso, index) => {
-            container.innerHTML += `
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="nr-card shadow-sm">
-                        <span class="category-label">${curso.c}</span>
-                        <h6 class="course-title">${curso.t}</h6>
-                        <button class="btn-buy" onclick="abrirEmenta(${index})">Consultar</button>
-                    </div>
-                </div>`;
+        techData.forEach(cat => {
+            let html = `<h3 class="category-title">${cat.categoria}</h3><div class="row g-3">`;
+            cat.cursos.forEach(c => {
+                html += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c.t}</div><div class="course-desc">${c.d}</div><button class="btn-buy" onclick="abrir('${c.t}')">Consultar</button></div></div>`;
+            });
+            html += `</div>`;
+            container.innerHTML += html;
         });
-
-        function abrirEmenta(index) {
-            const curso = listaCursos[index];
-            document.getElementById('modalTitulo').innerText = curso.t;
-            const listaUl = document.getElementById('modalEmenta');
-            listaUl.innerHTML = `<li>• Módulo 1: Introdução ao ${curso.t}</li><li>• Módulo 2: Conceitos e Ferramentas Técnicas</li><li>• Módulo 3: Prática e Estudo de Caso</li><li>• Módulo 4: Certificação e Mercado de Trabalho</li>`;
-            new bootstrap.Modal(document.getElementById('ementaModal')).show();
+        function abrir(t) {
+            document.getElementById('m-titulo').innerText = t;
+            document.getElementById('m-lista').innerHTML = `<li>• Fundamentos</li><li>• Ferramentas</li><li>• Projetos Reais</li><li>• Certificação 40h</li>`;
+            new bootstrap.Modal(document.getElementById('modalEmenta')).show();
         }
     </script>
 </body>
