@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SST e NRs - MAZZ</title>
+    <title>SST & NRs - MAZZ</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -17,32 +17,32 @@
 
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
 
-        /* NAVBAR PREMIUM */
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
 
-        /* HEADER */
-        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); }
+        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); margin-bottom: 40px; }
 
-        /* CARDS NR */
-        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; }
-        .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .nr-number { font-weight: 800; color: var(--mazz-blue); font-size: 1.2rem; display: block; margin-bottom: 5px; }
-        .nr-title { font-size: 0.9rem; font-weight: 600; color: var(--mazz-gray); min-height: 45px; margin-bottom: 15px; }
+        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
+        .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
         
-        .btn-nr { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; text-decoration: none; text-align: center; }
-        .btn-nr:hover { background-color: var(--mazz-gold); color: var(--mazz-blue); }
+        .category-label { background: var(--mazz-light); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; align-self: center; margin-bottom: 10px; text-transform: uppercase; }
 
-        .category-title { border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; font-weight: 800; color: var(--mazz-blue); text-transform: uppercase; }
+        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
+        
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
+        .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
 
-        /* FOOTER */
-        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 100px; text-align: center; }
-        .footer-copyright { font-weight: 700; color: var(--mazz-dark); }
-        .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
-        .footer-dev { font-size: 0.8rem; color: var(--mazz-gray); }
-        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
+        /* MODAL */
+        .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
+        .modal-title { font-weight: 800; text-transform: uppercase; font-size: 1.1rem; }
+        .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
+        
+        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
+        .btn-whats-modal:hover { background-color: #128c7e; color: white; }
+
+        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -65,60 +65,86 @@
 
     <header class="page-header text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">SEGURANÇA E SAÚDE NO TRABALHO</h1>
-            <p class="lead opacity-75">Catálogo de Normas Regulamentadoras - Atuação Nacional.</p>
+            <h1 class="display-4 fw-bold">SEGURANÇA DO TRABALHO & NRs</h1>
+            <p class="lead opacity-75">Treinamentos normativos com certificação de 40h e validade nacional.</p>
         </div>
     </header>
 
     <main class="container mb-5 flex-grow-1">
-        
-        <h3 class="category-title">Normas Gerais e Administrativas</h3>
-        <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 01</span><p class="nr-title">Disposições Gerais e GRO</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 03</span><p class="nr-title">Embargo e Interdição</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 04</span><p class="nr-title">SESMT</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 05</span><p class="nr-title">CIPA</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 07</span><p class="nr-title">PCMSO</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 09</span><p class="nr-title">Exposições Ocupacionais</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-        </div>
-
-        <h3 class="category-title">Proteção e Equipamentos</h3>
-        <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 06</span><p class="nr-title">EPI - Equipamentos de Proteção</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 23</span><p class="nr-title">Proteção Contra Incêndios</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 26</span><p class="nr-title">Sinalização de Segurança</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 28</span><p class="nr-title">Fiscalização e Penalidades</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-        </div>
-
-        <h3 class="category-title">Atividades Específicas</h3>
-        <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 10</span><p class="nr-title">Segurança em Eletricidade</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 11</span><p class="nr-title">Movimentação de Materiais</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 12</span><p class="nr-title">Máquinas e Equipamentos</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 13</span><p class="nr-title">Caldeiras e Vasos de Pressão</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 18</span><p class="nr-title">Indústria da Construção</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 33</span><p class="nr-title">Espaços Confinados</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 35</span><p class="nr-title">Trabalho em Altura</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-        </div>
-
-        <h3 class="category-title">Higiene e Conforto</h3>
-        <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 15</span><p class="nr-title">Operações Insalubres</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 16</span><p class="nr-title">Operações Perigosas</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 17</span><p class="nr-title">Ergonomia</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 24</span><p class="nr-title">Condições Sanitárias</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
-        </div>
-
+        <div id="cursos-container" class="row g-3 justify-content-center"></div>
     </main>
 
-    <footer class="mazz-footer">
-        <div class="container">
-            <div class="footer-copyright">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
-            <div class="footer-divider"></div>
-            <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
+    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header rounded-top-4">
+                    <h5 class="modal-title" id="modalTitulo">NR</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
+                    <h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6>
+                    <ul id="modalEmenta" class="list-unstyled"></ul>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR VALOR NO WHATSAPP</a>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <footer class="mazz-footer">
+        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        const listaNRs = [
+            { t: "NR 01 - Disposições Gerais e GRO", c: "Gestão" },
+            { t: "NR 05 - CIPA (Prevenção de Acidentes)", c: "Segurança" },
+            { t: "NR 06 - EPI (Equipamento Individual)", c: "Segurança" },
+            { t: "NR 07 - PCMSO (Controle Médico)", c: "Saúde" },
+            { t: "NR 09 - Agentes Físicos e Químicos", c: "Saúde" },
+            { t: "NR 10 - Segurança em Eletricidade", c: "Técnico" },
+            { t: "NR 11 - Transporte e Manuseio", c: "Operacional" },
+            { t: "NR 12 - Máquinas e Equipamentos", c: "Operacional" },
+            { t: "NR 13 - Caldeiras e Vasos de Pressão", c: "Técnico" },
+            { t: "NR 15 - Atividades Insalubres", c: "Saúde" },
+            { t: "NR 16 - Atividades Perigosas", c: "Segurança" },
+            { t: "NR 17 - Ergonomia no Trabalho", c: "Saúde" },
+            { t: "NR 18 - Construção Civil", c: "Técnico" },
+            { t: "NR 20 - Inflamáveis e Combustíveis", c: "Segurança" },
+            { t: "NR 23 - Proteção Contra Incêndios", c: "Segurança" },
+            { t: "NR 26 - Sinalização de Segurança", c: "Gestão" },
+            { t: "NR 33 - Espaços Confinados", c: "Técnico" },
+            { t: "NR 35 - Trabalho em Altura", c: "Técnico" },
+            { t: "NR 38 - Limpeza Urbana e Resíduos", c: "Operacional" },
+            { t: "Gestão de SST para Empresas", c: "Gestão" }
+        ];
+
+        const container = document.getElementById('cursos-container');
+        listaNRs.forEach((curso, index) => {
+            container.innerHTML += `
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="nr-card shadow-sm">
+                        <span class="category-label">${curso.c}</span>
+                        <h6 class="course-title">${curso.t}</h6>
+                        <button class="btn-buy" onclick="abrirEmenta(${index})">Consultar</button>
+                    </div>
+                </div>`;
+        });
+
+        function abrirEmenta(index) {
+            const curso = listaNRs[index];
+            document.getElementById('modalTitulo').innerText = curso.t;
+            const listaUl = document.getElementById('modalEmenta');
+            listaUl.innerHTML = `
+                <li>• Módulo 1: Legislação e Normas Vigentes</li>
+                <li>• Módulo 2: Identificação de Riscos e Perigos</li>
+                <li>• Módulo 3: Medidas de Controle e Prevenção</li>
+                <li>• Módulo 4: Primeiros Socorros e Emergências</li>
+                <li>• Módulo 5: Avaliação Final e Certificação 40h</li>`;
+            new bootstrap.Modal(document.getElementById('ementaModal')).show();
+        }
+    </script>
 </body>
 </html>
