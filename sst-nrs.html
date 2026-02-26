@@ -26,19 +26,19 @@
         /* HEADER */
         .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); }
 
-        /* TABELA E CARDS NR */
-        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; }
+        /* CARDS NR */
+        .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .nr-number { font-weight: 800; color: var(--mazz-blue); font-size: 1.2rem; display: block; margin-bottom: 5px; }
-        .nr-title { font-size: 0.9rem; font-weight: 600; color: var(--mazz-gray); min-height: 40px; }
+        .nr-title { font-size: 0.9rem; font-weight: 600; color: var(--mazz-gray); min-height: 45px; margin-bottom: 15px; }
         
-        .btn-nr { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; margin-top: 15px; border: none; padding: 8px; transition: 0.3s; }
+        .btn-nr { background-color: var(--mazz-blue); color: white; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; text-decoration: none; text-align: center; }
         .btn-nr:hover { background-color: var(--mazz-gold); color: var(--mazz-blue); }
 
         .category-title { border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; font-weight: 800; color: var(--mazz-blue); text-transform: uppercase; }
 
         /* FOOTER */
-        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: auto; text-align: center; }
+        .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 100px; text-align: center; }
         .footer-copyright { font-weight: 700; color: var(--mazz-dark); }
         .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
         .footer-dev { font-size: 0.8rem; color: var(--mazz-gray); }
@@ -66,7 +66,7 @@
     <header class="page-header text-center">
         <div class="container">
             <h1 class="display-4 fw-bold">SEGURANÇA E SAÚDE NO TRABALHO</h1>
-            <p class="lead opacity-75">Treinamentos e Consultoria em todas as Normas Regulamentadoras vigentes.</p>
+            <p class="lead opacity-75">Catálogo de Normas Regulamentadoras - Atuação Nacional.</p>
         </div>
     </header>
 
@@ -74,40 +74,39 @@
         
         <h3 class="category-title">Normas Gerais e Administrativas</h3>
         <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 01</span><p class="nr-title">Disposições Gerais e Gerenciamento de Riscos Ocupacionais</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 03</span><p class="nr-title">Embargo e Interdição</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 04</span><p class="nr-title">SESMT</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 05</span><p class="nr-title">CIPA - Comissão Interna de Prevenção de Acidentes</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 07</span><p class="nr-title">PCMSO - Programa de Controle Médico</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 09</span><p class="nr-title">Avaliação e Controle das Exposições Ocupacionais</p><button class="btn-nr">Ver Curso</button></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 01</span><p class="nr-title">Disposições Gerais e GRO</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 03</span><p class="nr-title">Embargo e Interdição</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 04</span><p class="nr-title">SESMT</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 05</span><p class="nr-title">CIPA</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 07</span><p class="nr-title">PCMSO</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 09</span><p class="nr-title">Exposições Ocupacionais</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
         </div>
 
-        <h3 class="category-title">Normas de Proteção e Equipamentos</h3>
+        <h3 class="category-title">Proteção e Equipamentos</h3>
         <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 06</span><p class="nr-title">EPI - Equipamento de Proteção Individual</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 23</span><p class="nr-title">Proteção Contra Incêndios</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 26</span><p class="nr-title">Sinalização de Segurança</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 28</span><p class="nr-title">Fiscalização e Penalidades</p><button class="btn-nr">Ver Curso</button></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 06</span><p class="nr-title">EPI - Equipamentos de Proteção</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 23</span><p class="nr-title">Proteção Contra Incêndios</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 26</span><p class="nr-title">Sinalização de Segurança</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 28</span><p class="nr-title">Fiscalização e Penalidades</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
         </div>
 
-        <h3 class="category-title">Normas de Atividades Específicas</h3>
+        <h3 class="category-title">Atividades Específicas</h3>
         <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 10</span><p class="nr-title">Segurança em Instalações e Serviços em Eletricidade</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 11</span><p class="nr-title">Transporte, Movimentação e Manuseio de Materiais</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 12</span><p class="nr-title">Segurança no Trabalho em Máquinas e Equipamentos</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 13</span><p class="nr-title">Caldeiras, Vasos de Pressão e Tubulações</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 18</span><p class="nr-title">Segurança e Saúde na Indústria da Construção</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 20</span><p class="nr-title">Líquidos Combustíveis e Inflamáveis</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 33</span><p class="nr-title">Espaços Confinados</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 35</span><p class="nr-title">Trabalho em Altura</p><button class="btn-nr">Ver Curso</button></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 10</span><p class="nr-title">Segurança em Eletricidade</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 11</span><p class="nr-title">Movimentação de Materiais</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 12</span><p class="nr-title">Máquinas e Equipamentos</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 13</span><p class="nr-title">Caldeiras e Vasos de Pressão</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 18</span><p class="nr-title">Indústria da Construção</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 33</span><p class="nr-title">Espaços Confinados</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 35</span><p class="nr-title">Trabalho em Altura</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
         </div>
 
-        <h3 class="category-title">Saúde e Meio Ambiente</h3>
+        <h3 class="category-title">Higiene e Conforto</h3>
         <div class="row g-3">
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 15</span><p class="nr-title">Atividades e Operações Insalubres</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 16</span><p class="nr-title">Atividades e Operações Perigosas</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 17</span><p class="nr-title">Ergonomia</p><button class="btn-nr">Ver Curso</button></div></div>
-            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 24</span><p class="nr-title">Condições Sanitárias e de Conforto</p><button class="btn-nr">Ver Curso</button></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 15</span><p class="nr-title">Operações Insalubres</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 16</span><p class="nr-title">Operações Perigosas</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 17</span><p class="nr-title">Ergonomia</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
+            <div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><span class="nr-number">NR 24</span><p class="nr-title">Condições Sanitárias</p><a href="#" class="btn-nr">Ver Curso</a></div></div>
         </div>
 
     </main>
