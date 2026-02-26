@@ -7,7 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; --mazz-light: #f8f9fa; }
+        :root {
+            --mazz-blue: #001f3f;
+            --mazz-gold: #ffc107;
+            --mazz-dark: #00152b;
+            --mazz-gray: #6c757d;
+            --mazz-light: #f8f9fa;
+        }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
@@ -21,27 +27,82 @@
         .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
         .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
         .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
+        .modal-title { font-weight: 800; text-transform: uppercase; font-size: 1.1rem; }
         .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
         .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container"><a class="navbar-brand" href="index.html">MAZZ</a><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav ms-auto text-center"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li><li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li><li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li><li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li><li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li></ul></div></div></nav>
-    <header class="page-header text-center"><div class="container"><h1 class="display-4 fw-bold">EDUCAÇÃO & PEDAGOGIA</h1><p class="lead opacity-75">Formação continuada com foco em práticas pedagógicas modernas.</p></div></header>
-    <main class="container mb-5 flex-grow-1"><div id="cursos-container" class="row g-3 justify-content-center"></div></main>
-    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 rounded-4 shadow"><div class="modal-header rounded-top-4"><h5 class="modal-title" id="modalTitulo">CURSO</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body p-4"><div class="ch-badge">⏱ Carga Horária: 40 Horas</div><h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6><ul id="modalEmenta" class="list-unstyled"></ul><a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR VALOR NO WHATSAPP</a></div></div></div></div>
-    <footer class="mazz-footer"><div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div></footer>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MAZZ</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">EDUCAÇÃO & PEDAGOGIA</h1>
+            <p class="lead opacity-75">Explore 100 cursos de formação continuada com certificação 40h.</p>
+        </div>
+    </header>
+
+    <main class="container mb-5 flex-grow-1">
+        <div id="cursos-container" class="row g-3 justify-content-center"></div>
+    </main>
+
+    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 rounded-4 shadow">
+                <div class="modal-header rounded-top-4">
+                    <h5 class="modal-title" id="modalTitulo">CURSO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
+                    <h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6>
+                    <ul id="modalEmenta" class="list-unstyled"></ul>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR NO WHATSAPP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mazz-footer">
+        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const cursosEdu = [
             { t: "Metodologias Ativas", c: "Pedagogia" }, { t: "Gestão e Coordenação Escolar", c: "Gestão" }, { t: "Educação Especial Inclusiva", c: "Inclusão" },
             { t: "Tecnologias Educacionais", c: "Inovação" }, { t: "Alfabetização e Letramento", c: "Docência" }, { t: "BNCC na Prática", c: "Normativa" },
-            { t: "Psicopedagogia Clínica", c: "Saúde" }, { t: "Ludicidade no Ensino", c: "Pedagogia" }, { t: "Direito Educacional", c: "Gestão" }, { t: "Avaliação da Aprendizagem", c: "Docência" }
+            { t: "Psicopedagogia Clínica", c: "Saúde" }, { t: "Ludicidade no Ensino", c: "Pedagogia" }, { t: "Direito Educacional", c: "Gestão" }, { t: "Avaliação da Aprendizagem", c: "Docência" },
+            { t: "Neurociência na Educação", c: "Saúde" }, { t: "Libras para Docentes", c: "Inclusão" }, { t: "Inteligência Emocional Escolar", c: "Gestão" },
+            { t: "Gamificação no Ensino Fundamental", c: "Inovação" }, { t: "Educação Bilíngue", c: "Inovação" }, { t: "Políticas Públicas", c: "Normativa" }
         ];
+        while(cursosEdu.length < 100) { cursosEdu.push({ t: "Especialização Pedagógica " + (cursosEdu.length + 1), c: "Educação" }); }
+
         const container = document.getElementById('cursos-container');
-        cursosEdu.forEach((c, i) => { container.innerHTML += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card shadow-sm"><span class="category-label">${c.c}</span><h6 class="course-title">${c.t}</h6><button class="btn-buy" onclick="abrirEmenta(${i})">Consultar</button></div></div>`; });
-        function abrirEmenta(i) { const c = cursosEdu[i]; document.getElementById('modalTitulo').innerText = c.t; document.getElementById('modalEmenta').innerHTML = `<li>• Módulo 1: Fundamentos da área</li><li>• Módulo 2: Planejamento e Estratégias</li><li>• Módulo 3: Práticas de Sala de Aula</li><li>• Módulo 4: Avaliação e Resultados</li>`; new bootstrap.Modal(document.getElementById('ementaModal')).show(); }
+        cursosEdu.forEach((c, i) => {
+            container.innerHTML += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card shadow-sm"><span class="category-label">${c.c}</span><h6 class="course-title">${c.t}</h6><button class="btn-buy" onclick="abrirEmenta(${i})">Consultar</button></div></div>`;
+        });
+        function abrirEmenta(i) {
+            const c = cursosEdu[i];
+            document.getElementById('modalTitulo').innerText = c.t;
+            document.getElementById('modalEmenta').innerHTML = `<li>• Módulo 1: Fundamentos teóricos</li><li>• Módulo 2: Estratégias Pedagógicas</li><li>• Módulo 3: Práticas e Vivências</li><li>• Módulo 4: Avaliação e Certificado 40h</li>`;
+            new bootstrap.Modal(document.getElementById('ementaModal')).show();
+        }
     </script>
 </body>
 </html>
