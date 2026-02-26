@@ -7,42 +7,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --mazz-blue: #001f3f;
-            --mazz-gold: #ffc107;
-            --mazz-dark: #00152b;
-            --mazz-gray: #6c757d;
-            --mazz-light: #f8f9fa;
+        :root { 
+            --mazz-blue: #001f3f; 
+            --mazz-gold: #ffc107; 
+            --mazz-dark: #00152b; 
+            --mazz-gray: #6c757d; 
         }
-
+        
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
 
+        /* NAVBAR PADRÃO MAZZ - IDENTICA AO INICIO */
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
-        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; }
+        .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
         .nav-link:hover, .nav-link.active { color: var(--mazz-gold) !important; }
 
-        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 60px 0; border-bottom: 5px solid var(--mazz-gold); margin-bottom: 40px; }
+        /* HEADER E BUSCA */
+        .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 40px 0; border-bottom: 5px solid var(--mazz-gold); text-align: center; }
+        .search-container { background: #f4f7f9; padding: 30px 0; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+        .search-input { border: 2px solid var(--mazz-blue); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 1.1rem; outline: none; }
+        .search-input:focus { border-color: var(--mazz-gold); box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2); }
 
+        /* TRILHAS E CARDS */
+        .trilha-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1.3rem; }
+        .nivel-label { font-weight: 800; font-size: 0.85rem; color: var(--mazz-gray); margin: 20px 0 10px; display: block; border-bottom: 1px solid #eee; padding-bottom: 5px; text-transform: uppercase; }
         .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        
-        .category-label { background: var(--mazz-light); color: var(--mazz-blue); font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 4px; align-self: center; margin-bottom: 10px; text-transform: uppercase; }
-
-        .course-title { font-weight: 700; font-size: 0.95rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
-        
-        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; width: 100%; border: none; padding: 10px; transition: 0.3s; margin-top: auto; cursor: pointer; }
+        .course-title { font-weight: 700; font-size: 0.9rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; }
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; cursor: pointer; transition: 0.3s; }
         .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
 
-        /* MODAL */
-        .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
-        .modal-title { font-weight: 800; text-transform: uppercase; font-size: 1.1rem; }
-        .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
-        
-        .btn-whats-modal { background-color: #25d366; color: white; font-weight: 800; border-radius: 10px; padding: 12px; width: 100%; display: block; text-decoration: none; text-align: center; margin-top: 20px; }
-        .btn-whats-modal:hover { background-color: #128c7e; color: white; }
-
+        /* RODAPÉ PADRÃO MAZZ */
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
+        .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
+        .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -50,6 +48,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">MAZZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
@@ -63,88 +64,78 @@
         </div>
     </nav>
 
-    <header class="page-header text-center">
+    <header class="page-header">
         <div class="container">
-            <h1 class="display-4 fw-bold">SEGURANÇA DO TRABALHO & NRs</h1>
-            <p class="lead opacity-75">Treinamentos normativos com certificação de 40h e validade nacional.</p>
+            <h1 class="display-6 fw-bold text-uppercase">Segurança e Saúde no Trabalho</h1>
+            <p class="lead opacity-75">Treinamentos de NRs e Higiene Ocupacional • 40h</p>
         </div>
     </header>
 
+    <section class="search-container sticky-top" style="top: 80px; z-index: 999;">
+        <div class="container text-center">
+            <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Busque por NR, CIPA, PGR, Altura...">
+        </div>
+    </section>
+
     <main class="container mb-5 flex-grow-1">
-        <div id="cursos-container" class="row g-3 justify-content-center"></div>
+        <div id="trilhas-container"></div>
+        <div id="noResults" class="text-center py-5 d-none">
+            <h4>Nenhum treinamento encontrado.</h4>
+        </div>
     </main>
 
-    <div class="modal fade" id="ementaModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 rounded-4 shadow">
-                <div class="modal-header rounded-top-4">
-                    <h5 class="modal-title" id="modalTitulo">NR</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
-                    <h6 class="fw-bold mb-3 text-primary">Conteúdo Programático:</h6>
-                    <ul id="modalEmenta" class="list-unstyled"></ul>
-                    <a href="https://wa.me/5562996466033" target="_blank" class="btn-whats-modal">CONSULTAR VALOR NO WHATSAPP</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer class="mazz-footer">
-        <div class="container">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
+        <div class="container">
+            <div class="fw-bold">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
+            <div class="footer-divider"></div>
+            <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
-        const listaNRs = [
-            { t: "NR 01 - Disposições Gerais e GRO", c: "Gestão" },
-            { t: "NR 05 - CIPA (Prevenção de Acidentes)", c: "Segurança" },
-            { t: "NR 06 - EPI (Equipamento Individual)", c: "Segurança" },
-            { t: "NR 07 - PCMSO (Controle Médico)", c: "Saúde" },
-            { t: "NR 09 - Agentes Físicos e Químicos", c: "Saúde" },
-            { t: "NR 10 - Segurança em Eletricidade", c: "Técnico" },
-            { t: "NR 11 - Transporte e Manuseio", c: "Operacional" },
-            { t: "NR 12 - Máquinas e Equipamentos", c: "Operacional" },
-            { t: "NR 13 - Caldeiras e Vasos de Pressão", c: "Técnico" },
-            { t: "NR 15 - Atividades Insalubres", c: "Saúde" },
-            { t: "NR 16 - Atividades Perigosas", c: "Segurança" },
-            { t: "NR 17 - Ergonomia no Trabalho", c: "Saúde" },
-            { t: "NR 18 - Construção Civil", c: "Técnico" },
-            { t: "NR 20 - Inflamáveis e Combustíveis", c: "Segurança" },
-            { t: "NR 23 - Proteção Contra Incêndios", c: "Segurança" },
-            { t: "NR 26 - Sinalização de Segurança", c: "Gestão" },
-            { t: "NR 33 - Espaços Confinados", c: "Técnico" },
-            { t: "NR 35 - Trabalho em Altura", c: "Técnico" },
-            { t: "NR 38 - Limpeza Urbana e Resíduos", c: "Operacional" },
-            { t: "Gestão de SST para Empresas", c: "Gestão" }
+        const dadosTrilhas = [
+            {
+                trilha: "🏗️ NRs — SEGURANÇA OPERACIONAL",
+                niveis: [
+                    { nome: "🔹 Nível Básico", cursos: ["NR-35: Trabalho em Altura", "NR-33: Espaço Confinado", "NR-18: Construção Civil", "NR-12: Máquinas e Equipamentos"] },
+                    { nome: "🔹 Elétrica e Especializados", cursos: ["NR-10: Segurança em Eletricidade", "NR-10 SEP", "NR-13: Vasos de Pressão", "NR-20: Inflamáveis"] }
+                ]
+            },
+            {
+                trilha: "📊 GESTÃO E HIGIENE",
+                niveis: [
+                    { nome: "🔹 Documentação", cursos: ["PGR: Gerenciamento de Riscos", "LTCAT e Laudos", "eSocial para SST", "PCMSO Técnico"] },
+                    { nome: "🔹 Comissões", cursos: ["CIPA: NR-05", "Brigada de Incêndio", "Primeiros Socorros", "NR-17: Ergonomia"] }
+                ]
+            }
         ];
 
-        const container = document.getElementById('cursos-container');
-        listaNRs.forEach((curso, index) => {
-            container.innerHTML += `
-                <div class="col-6 col-md-4 col-lg-3">
-                    <div class="nr-card shadow-sm">
-                        <span class="category-label">${curso.c}</span>
-                        <h6 class="course-title">${curso.t}</h6>
-                        <button class="btn-buy" onclick="abrirEmenta(${index})">Consultar</button>
-                    </div>
-                </div>`;
-        });
-
-        function abrirEmenta(index) {
-            const curso = listaNRs[index];
-            document.getElementById('modalTitulo').innerText = curso.t;
-            const listaUl = document.getElementById('modalEmenta');
-            listaUl.innerHTML = `
-                <li>• Módulo 1: Legislação e Normas Vigentes</li>
-                <li>• Módulo 2: Identificação de Riscos e Perigos</li>
-                <li>• Módulo 3: Medidas de Controle e Prevenção</li>
-                <li>• Módulo 4: Primeiros Socorros e Emergências</li>
-                <li>• Módulo 5: Avaliação Final e Certificação 40h</li>`;
-            new bootstrap.Modal(document.getElementById('ementaModal')).show();
+        const container = document.getElementById('trilhas-container');
+        function render(f = "") {
+            container.innerHTML = "";
+            let total = 0;
+            dadosTrilhas.forEach(t => {
+                let html = `<div>`;
+                let has = false;
+                let content = `<h2 class="trilha-title">${t.trilha}</h2>`;
+                t.niveis.forEach(n => {
+                    let nHtml = `<span class="nivel-label">${n.nome}</span><div class="row g-3">`;
+                    let count = 0;
+                    n.cursos.forEach(c => {
+                        if (c.toLowerCase().includes(f.toLowerCase())) {
+                            nHtml += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy">Consultar</button></div></div>`;
+                            count++; total++; has = true;
+                        }
+                    });
+                    if (count > 0) content += nHtml + `</div>`;
+                });
+                if (has) container.innerHTML += html + content + `</div>`;
+            });
+            document.getElementById('noResults').classList.toggle('d-none', total > 0);
         }
+        document.getElementById('searchInput').addEventListener('input', (e) => render(e.target.value));
+        render();
     </script>
 </body>
 </html>

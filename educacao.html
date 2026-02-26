@@ -7,16 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --mazz-blue: #001f3f; 
-            --mazz-gold: #ffc107; 
-            --mazz-dark: #00152b; 
-            --mazz-gray: #6c757d; 
-        }
-        
+        :root { --mazz-blue: #001f3f; --mazz-gold: #ffc107; --mazz-dark: #00152b; --mazz-gray: #6c757d; }
         body { padding-top: 85px; font-family: 'Inter', sans-serif; background-color: #ffffff; color: var(--mazz-dark); }
-
-        /* NAVBAR IDÊNTICA AO INÍCIO */
+        
+        /* NAVBAR PADRÃO MAZZ */
         .navbar { background: rgba(0, 31, 63, 0.98) !important; backdrop-filter: blur(12px); border-bottom: 4px solid var(--mazz-gold); padding: 15px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
         .navbar-brand { font-size: 1.8rem; font-weight: 800; letter-spacing: 2px; color: white !important; text-decoration: none; }
         .nav-link { color: rgba(255, 255, 255, 0.85) !important; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin: 0 10px; transition: 0.3s; }
@@ -25,22 +19,22 @@
         /* HEADER E BUSCA */
         .page-header { background: linear-gradient(135deg, var(--mazz-blue) 0%, var(--mazz-dark) 100%); color: white; padding: 40px 0; border-bottom: 5px solid var(--mazz-gold); text-align: center; }
         .search-container { background: #f4f7f9; padding: 30px 0; border-bottom: 1px solid #eee; margin-bottom: 20px; }
-        .search-input { border: 2px solid var(--mazz-blue); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 1.1rem; outline: none; transition: 0.3s; }
-        .search-input:focus { border-color: var(--mazz-gold); box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2); }
+        .search-input { border: 2px solid var(--mazz-blue); border-radius: 50px; padding: 12px 25px; font-weight: 600; font-size: 1.1rem; outline: none; }
 
-        /* TRILHAS E NÍVEIS */
+        /* TRILHAS */
         .trilha-title { color: var(--mazz-blue); font-weight: 800; border-left: 5px solid var(--mazz-gold); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1.3rem; }
-        .nivel-label { font-weight: 800; font-size: 0.85rem; color: var(--mazz-gray); margin: 20px 0 10px; display: block; border-bottom: 1px solid #eee; padding-bottom: 5px; text-transform: uppercase; }
         
-        /* CARDS DE CURSOS */
+        /* CARDS */
         .nr-card { border: 1px solid #eee; border-radius: 12px; transition: 0.3s; background: #fff; padding: 20px; height: 100%; display: flex; flex-direction: column; text-align: center; }
         .nr-card:hover { border-color: var(--mazz-gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
-        .course-title { font-weight: 700; font-size: 0.9rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; line-height: 1.3; }
-        
-        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; cursor: pointer; transition: 0.3s; }
-        .btn-buy:hover { background-color: var(--mazz-gold); color: var(--mazz-blue) !important; }
+        .course-title { font-weight: 700; font-size: 0.9rem; color: var(--mazz-blue); min-height: 45px; margin-bottom: 15px; }
+        .btn-buy { background-color: var(--mazz-blue); color: white !important; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 6px; border: none; padding: 10px; margin-top: auto; cursor: pointer; }
 
-        /* RODAPÉ PADRÃO */
+        /* MODAL */
+        .modal-header { background-color: var(--mazz-blue); color: white; border-bottom: 3px solid var(--mazz-gold); }
+        .ch-badge { background-color: var(--mazz-gold); color: var(--mazz-blue); font-weight: 800; padding: 5px 12px; border-radius: 5px; font-size: 0.85rem; display: inline-block; margin-bottom: 15px; }
+
+        /* FOOTER */
         .mazz-footer { background-color: #f9f9f9; padding: 40px 0 20px; border-top: 1px solid #ececec; margin-top: 60px; text-align: center; }
         .footer-divider { width: 50px; height: 2px; background: var(--mazz-gold); margin: 15px auto; }
         .footer-dev a { color: #198754; text-decoration: none; font-weight: 700; }
@@ -57,10 +51,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="engenharias.html">Engenharias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tecnologia.html">Tecnologia</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="educacao.html">Educação</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="academico.html">Academico</a></li>
                     <li class="nav-item"><a class="nav-link" href="concursos.html">Concursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="laudos.html">Laudos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nos</a></li>
                 </ul>
             </div>
         </div>
@@ -68,43 +63,50 @@
 
     <header class="page-header">
         <div class="container">
-            <h1 class="display-6 fw-bold text-uppercase">Formação Continuada & Pedagogia</h1>
-            <p class="lead opacity-75">Qualificação Especializada com Certificação de 40 Horas</p>
+            <h1 class="display-6 fw-bold text-uppercase">Educação & Formação Acadêmica</h1>
+            <p class="lead opacity-75">80 Cursos de Extensão • Certificação de 40 Horas</p>
         </div>
     </header>
 
     <section class="search-container sticky-top" style="top: 80px; z-index: 999;">
         <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Qual curso você procura? (Ex: BNCC, Gestão, Inclusão...)">
-                </div>
-            </div>
+            <input type="text" id="searchInput" class="form-control search-input" placeholder="🔍 Busque por Matemática, Química, Artes, Sociologia...">
         </div>
     </section>
 
     <main class="container mb-5 flex-grow-1">
         <div id="trilhas-container"></div>
         <div id="noResults" class="text-center py-5 d-none">
-            <h4>Nenhum curso encontrado.</h4>
-            <p>Tente termos mais genéricos ou fale com um consultor no WhatsApp.</p>
+            <h4>Nenhum curso acadêmico encontrado.</h4>
         </div>
     </main>
 
     <div class="modal fade" id="modalEmenta" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow">
-            <div class="modal-header bg-dark text-white"><h5 class="modal-title fw-bold" id="m-titulo"></h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-            <div class="modal-body p-4 text-center">
-                <div class="badge bg-warning text-dark mb-3 p-2">Carga Horária: 40 Horas</div>
-                <ul id="m-lista" class="list-unstyled text-start mx-auto" style="max-width: 320px;"></ul>
-                <a href="https://wa.me/5562996466033" target="_blank" class="btn btn-success w-100 fw-bold py-3 mt-3">CONSULTAR WHATSAPP</a>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="m-titulo">EMENTA DO CURSO</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="ch-badge">⏱ Carga Horária: 40 Horas</div>
+                    <h6 class="fw-bold text-primary mb-3">Grade Curricular:</h6>
+                    <ul id="m-lista" class="list-unstyled">
+                        <li class="mb-2">✅ <b>Unidade 1:</b> Fundamentos e Contexto Histórico</li>
+                        <li class="mb-2">✅ <b>Unidade 2:</b> Teorias e Metodologias Aplicadas</li>
+                        <li class="mb-2">✅ <b>Unidade 3:</b> Aplicações Práticas e Estudos de Caso</li>
+                        <li class="mb-2">✅ <b>Unidade 4:</b> Avaliação de Conhecimento e Certificação</li>
+                    </ul>
+                    <hr>
+                    <a href="https://wa.me/5562996466033" target="_blank" class="btn btn-success w-100 fw-bold py-3 mt-3">CONSULTAR NO WHATSAPP</a>
+                </div>
             </div>
-        </div></div>
+        </div>
     </div>
 
     <footer class="mazz-footer">
         <div class="container">
-            <div class="fw-bold">&copy; 2026 MAZZ. Todos os direitos reservados. Goiânia - GO.</div>
+            <div class="fw-bold">&copy; 2026 MAZZ. Todos os direitos reservados.</div>
             <div class="footer-divider"></div>
             <div class="footer-dev">Desenvolvido por: <a href="https://www.kmprojetos.eng.br/" target="_blank">KM Engenharia & Tecnologia</a></div>
         </div>
@@ -113,66 +115,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         const dadosTrilhas = [
-            {
-                trilha: "🍎 TRILHA 1 — PRÁTICAS DOCENTES",
-                niveis: [
-                    { nome: "🔹 Nível Básico", cursos: ["Metodologias Ativas no Ensino", "Alfabetização e Letramento", "Psicomotricidade na Educação Infantil", "Ludicidade e Recreação"] },
-                    { nome: "🔹 Nível Intermediário", cursos: ["Práticas de BNCC em Sala de Aula", "Avaliação Escolar e Desempenho", "Literatura e Contação de Histórias", "Educação Inclusiva"] },
-                    { nome: "🔹 Nível Avançado", cursos: ["Neurociência da Educação", "Ensino Híbrido e Gamificação", "Educação Digital Crítica", "Inteligência Artificial na Educação"] }
-                ]
-            },
-            {
-                trilha: "🏫 TRILHA 2 — GESTÃO E COORDENAÇÃO",
-                niveis: [
-                    { nome: "🔹 Nível Básico", cursos: ["Introdução à Gestão Escolar", "Organização Pedagógica"] },
-                    { nome: "🔹 Nível Intermediário", cursos: ["Coordenação Pedagógica", "Direito Educacional e Estatutos", "Bullying e Mediação de Conflitos"] },
-                    { nome: "🔹 Nível Avançado", cursos: ["Liderança e Clima Organizacional", "Gestão Estratégica de Unidades Escolares", "Marketing para Instituições de Ensino"] }
-                ]
-            }
+            { trilha: "📐 MATEMÁTICA", cursos: ["Fundamentos de Matemática Básica", "Álgebra Elementar e Equações", "Geometria Plana e Espacial", "Trigonometria Aplicada", "Matemática Financeira", "Estatística Descritiva e Probabilidade", "Raciocínio Lógico Matemático", "Cálculo Diferencial e Integral I", "Cálculo Diferencial e Integral II", "Álgebra Linear e Geometria Analítica"] },
+            { trilha: "📚 LETRAS", cursos: ["Gramática Normativa", "Interpretação e Produção de Texto", "Redação Oficial e Empresarial", "Linguística Geral", "Literatura Brasileira", "Literatura Portuguesa", "Teoria e Análise do Discurso", "Morfossintaxe Avançada", "Ensino de Língua Portuguesa", "Técnicas de Oratória"] },
+            { trilha: "⚛️ FÍSICA", cursos: ["Fundamentos de Física Geral", "Mecânica Clássica", "Termologia e Termodinâmica", "Óptica Geométrica e Física", "Ondulatória", "Eletricidade e Magnetismo", "Física Moderna", "Física Nuclear e Radioatividade", "Física Aplicada à Engenharia", "Instrumentação e Medidas Físicas"] },
+            { trilha: "🧬 BIOLOGIA", cursos: ["Biologia Celular", "Genética Básica e Molecular", "Anatomia e Fisiologia Humana", "Microbiologia", "Botânica Geral", "Zoologia Geral", "Ecologia e Sustentabilidade", "Biotecnologia", "Imunologia", "Evolução e Biodiversidade"] },
+            { trilha: "⚗️ QUÍMICA", cursos: ["Fundamentos de Química Geral", "Estrutura Atômica e Tabela Periódica", "Ligações Químicas e Geometria", "Estequiometria e Cálculos", "Físico-Química", "Química Orgânica", "Química Analítica", "Química Ambiental e Industrial"] },
+            { trilha: "🌎 GEOGRAFIA", cursos: ["Fundamentos de Geografia Geral", "Geografia Física", "Geografia Humana e Econômica", "Cartografia e Geoprocessamento", "Geopolítica Mundial", "Urbanização e Espaço Urbano", "Geografia Agrária", "Meio Ambiente e Sustentabilidade"] },
+            { trilha: "🎨 ARTES", cursos: ["História da Arte Antiga e Medieval", "História da Arte Moderna e Contemporânea", "Fundamentos das Artes Visuais", "Técnicas de Desenho e Pintura", "Arte Brasileira", "Estética e Teoria da Arte", "Educação Artística e Metodologia", "Produção Cultural e Curadoria"] },
+            { trilha: "👥 SOCIOLOGIA", cursos: ["Fundamentos da Sociologia", "Teoria Sociológica Clássica", "Teoria Sociológica Contemporânea", "Sociologia da Educação", "Sociologia Urbana", "Cultura, Identidade e Sociedade", "Movimentos Sociais", "Metodologia da Pesquisa"] },
+            { trilha: "🏛️ FILOSOFIA", cursos: ["Introdução à Filosofia", "Filosofia Antiga", "Filosofia Medieval", "Filosofia Moderna", "Filosia Contemporânea", "Ética e Filosofia Moral", "Filosofia Política", "Lógica e Argumentação"] }
         ];
 
         const container = document.getElementById('trilhas-container');
 
-        function renderCursos(filtro = "") {
+        function render(f = "") {
             container.innerHTML = "";
-            let totalVisiveis = 0;
-            
+            let total = 0;
             dadosTrilhas.forEach(t => {
-                let trilhaHtml = `<div class="mb-5">`;
-                let hasCursos = false;
-                let content = `<h2 class="trilha-title">${t.trilha}</h2>`;
-
-                t.niveis.forEach(n => {
-                    let nHtml = `<span class="nivel-label">${n.nome}</span><div class="row g-3">`;
-                    let count = 0;
-                    n.cursos.forEach(c => {
-                        if (c.toLowerCase().includes(filtro.toLowerCase())) {
-                            nHtml += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy" onclick="abrir('${c}')">Consultar</button></div></div>`;
-                            count++; totalVisiveis++; hasCursos = true;
-                        }
-                    });
-                    if (count > 0) content += nHtml + `</div>`;
+                let html = `<div class="mb-5">`;
+                let has = false;
+                let content = `<h2 class="trilha-title">${t.trilha}</h2><div class="row g-3">`;
+                
+                t.cursos.forEach(c => {
+                    if (c.toLowerCase().includes(f.toLowerCase())) {
+                        content += `<div class="col-6 col-md-4 col-lg-3"><div class="nr-card"><div class="course-title">${c}</div><button class="btn-buy" onclick="abrir('${c}')">Consultar</button></div></div>`;
+                        total++; has = true;
+                    }
                 });
-
-                if (hasCursos) container.innerHTML += trilhaHtml + content + `</div>`;
+                
+                content += `</div></div>`;
+                if (has) container.innerHTML += content;
             });
-
-            document.getElementById('noResults').classList.toggle('d-none', totalVisiveis > 0);
+            document.getElementById('noResults').classList.toggle('d-none', total > 0);
         }
-
-        document.getElementById('searchInput').addEventListener('input', (e) => renderCursos(e.target.value));
-        renderCursos();
 
         function abrir(t) {
             document.getElementById('m-titulo').innerText = t;
-            document.getElementById('m-lista').innerHTML = `
-                <li class="mb-2">• <b>Módulo 1:</b> Fundamentos e Contexto Pedagógico</li>
-                <li class="mb-2">• <b>Módulo 2:</b> Estratégias e Metodologias Práticas</li>
-                <li class="mb-2">• <b>Módulo 3:</b> Planejamento e BNCC Aplicada</li>
-                <li class="mb-2">• <b>Módulo 4:</b> Avaliação Final e Certificação 40h</li>
-            `;
             new bootstrap.Modal(document.getElementById('modalEmenta')).show();
         }
+
+        document.getElementById('searchInput').addEventListener('input', (e) => render(e.target.value));
+        render();
     </script>
 </body>
 </html>
