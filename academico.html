@@ -7,21 +7,57 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#001f3f">
     <style>
-        body { background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 40px 20px; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 40px 20px; line-height: 1.6; }
         .icon { font-size: 60px; margin-bottom: 10px; }
-        .btn-list { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 320px; margin: 0 auto; }
-        .btn { background: white; color: #001f3f; padding: 16px; border-radius: 15px; text-decoration: none; font-weight: bold; }
+        h1 { font-size: 1.8rem; margin-bottom: 20px; letter-spacing: 2px; }
+        
+        .content-text { 
+            max-width: 500px; 
+            margin: 0 auto 35px auto; 
+            text-align: justify; 
+            font-size: 0.95rem; 
+            opacity: 0.9; 
+        }
+        
+        .content-text b { color: #ffc107; } /* Destaque em dourado para palavras-chave */
+
+        .btn-list { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px; margin: 0 auto; }
+        .btn { 
+            background: white; 
+            color: #001f3f; 
+            padding: 18px; 
+            border-radius: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1rem; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+            display: block;
+        }
+        .btn:active { transform: scale(0.97); background: #eee; }
     </style>
 </head>
 <body>
+
     <div class="icon">🎓</div>
     <h1>ACADÊMICO</h1>
-    <p style="margin-bottom: 30px; opacity: 0.8;">Suporte em TCC e Estágio Remoto</p>
-    <div class="btn-list">
-        <a href="#" class="btn">ORIENTAÇÃO DE TCC</a>
-        <a href="#" class="btn">ESTÁGIO REMOTO</a>
-        <a href="#" class="btn">MODELOS DE TRABALHOS</a>
+
+    <div class="content-text">
+        <p>No <b>Portal MAZZ</b>, transformamos a jornada acadêmica em uma experiência de sucesso e aprendizado prático. Nossa atuação é focada em oferecer suporte estratégico para estudantes e profissionais:</p>
+        
+        <p>• <b>Suporte em TCC:</b> Auxiliamos na estruturação, normas técnicas e fundamentação teórica para que seu trabalho final seja impecável.</p>
+        
+        <p>• <b>Estágios:</b> Conectamos você ao mercado através de oportunidades de <b>estágio presencial e remoto</b>, permitindo flexibilidade e experiência real na sua área de formação.</p>
+        
+        <p>• <b>Trabalhos Acadêmicos:</b> Consultoria especializada em diversos tipos de produções científicas e relatórios técnicos.</p>
     </div>
+
+    <div class="btn-list">
+        <a href="https://wa.me/5562996466033?text=Olá, quero saber mais sobre suporte em TCC" class="btn">SOLICITAR SUPORTE TCC</a>
+        <a href="https://wa.me/5562996466033?text=Olá, tenho interesse em vagas de Estágio" class="btn">VAGAS DE ESTÁGIO</a>
+        <a href="https://wa.me/5562996466033?text=Olá, preciso de ajuda com trabalhos acadêmicos" class="btn">OUTROS TRABALHOS</a>
+    </div>
+
     <script src="footer.js"></script>
 </body>
 </html>
