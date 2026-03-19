@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAZZ - Portal de Engenharia e Treinamentos</title>
-    <link rel="stylesheet" href="style.css"> <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-        .hero { background: #0056b3; color: white; padding: 60px 20px; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 40px; }
-        .btn { padding: 20px; background: #f4f4f4; border: 1px solid #ddd; text-decoration: none; color: #333; font-weight: bold; border-radius: 8px; transition: 0.3s; }
-        .btn:hover { background: #0056b3; color: white; }
+    <title>MAZZ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mantendo o seu estilo original de botões coloridos */
+        body { font-family: sans-serif; text-align: center; background-color: #f0f2f5; margin: 0; padding: 20px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 1000px; margin: 0 auto; }
+        .card { width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; 
+                text-decoration: none; color: white; font-weight: bold; border-radius: 15px; 
+                font-size: 1.1em; transition: transform 0.2s; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .card:hover { transform: scale(1.05); }
+        
+        /* Cores originais do seu projeto */
+        .azul { background-color: #007bff; }
+        .verde { background-color: #28a745; }
+        .laranja { background-color: #fd7e14; }
+        .vermelho { background-color: #dc3545; }
+        .roxo { background-color: #6f42c1; }
+        .preto { background-color: #343a40; }
+        .logo { margin-bottom: 30px; max-width: 200px; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <img src="logo.png" alt="MAZZ Logo" style="max-width: 150px;">
-        <h1>Bem-vindo ao Portal MAZZ</h1>
-        <p>Engenharia Civil, Consultoria e Educação Profissional</p>
-    </div>
 
-    <div class="menu-grid">
-        <a href="engenharias.html" class="btn">Engenharia Civil</a>
-        <a href="sst-nrs.html" class="btn">Segurança do Trabalho (SST)</a>
-        <a href="academico.html" class="btn">Área Acadêmica</a>
-        <a href="laudos.html" class="btn">Laudos e Perícias</a>
-        <a href="concursos.html" class="btn">Concursos</a>
+    <img src="logo.png" alt="Logo MAZZ" class="logo">
+
+    <div class="container">
+        <a href="concursos.html" class="card verde">CONCURSOS</a>
+        <a href="engenharias.html" class="card azul">ENGENHARIAS</a>
+        <a href="sst-nrs.html" class="card laranja">SST - NRs</a>
+        <a href="academico.html" class="card roxo">ACADÊMICO</a>
+        <a href="laudos.html" class="card vermelho">LAUDOS</a>
+        <a href="tecnologia.html" class="card preto">TECNOLOGIA</a>
+        <a href="cursos.html" class="card azul">CURSOS</a>
+        <a href="educacao.html" class="card verde">EDUCAÇÃO</a>
     </div>
 
     <script src="footer.js"></script>
