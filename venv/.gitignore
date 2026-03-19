@@ -1,0 +1,19 @@
+New-Item -Path .gitignore -ItemType File -Force
+Set-Content -Path .gitignore -Value "
+# Arquivos do Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Arquivos de editores (VS Code / Sublime)
+.vscode/
+.history/
+*.log
+*.tmp
+
+# Arquivos de sistema/node (caso use futuramente)
+node_modules/
+dist/
+build/
+"
