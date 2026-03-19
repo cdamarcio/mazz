@@ -10,25 +10,27 @@
     <meta name="theme-color" content="#001f3f">
     <style>
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 40px 20px; }
+        body { background-color: #001f3f; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 40px 0; }
         .logo { max-width: 140px; margin-bottom: 20px; }
-        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); width: 70%; margin: 20px auto; }
-        h1 { font-size: 1.3rem; font-weight: 300; margin-bottom: 35px; line-height: 1.4; }
-        .btn-list { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px; margin: 0 auto; }
+        
+        /* Linha de fora a fora */
+        hr { border: 0; border-top: 1px solid rgba(255,255,255,0.3); width: 100%; margin: 20px 0 35px 0; }
+        
+        h1 { font-size: 1.3rem; font-weight: 300; margin-bottom: 35px; line-height: 1.4; padding: 0 20px; }
+        .btn-list { display: flex; flex-direction: column; gap: 15px; width: 100%; max-width: 320px; margin: 0 auto; padding: 0 20px; }
         .btn { background: white; color: #001f3f; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
         .btn:active { transform: scale(0.97); background: #eee; }
     </style>
 </head>
 <body>
     <img src="img/logo.png" alt="MAZZ" class="logo">
-    <hr>
-    <h1>Cursos, Concursos, TCCs e Estágios Remotos</h1>
+    
+    <hr> <h1>Cursos, Concursos, TCCs e Estágios Remotos</h1>
+    
     <div class="btn-list">
         <a href="cursos.html" class="btn">CURSOS</a>
         <a href="concursos.html" class="btn">CONCURSOS</a>
         <a href="academico.html" class="btn">ACADÊMICO (TCC/ESTÁGIO)</a>
-        <a href="educacao.html" class="btn">EDUCAÇÃO</a>
-        <a href="tecnologia.html" class="btn">TECNOLOGIA</a>
     </div>
     <script src="footer.js"></script>
 </body>
